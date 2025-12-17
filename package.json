@@ -1,0 +1,17 @@
+{
+  "name": "cctp-base-to-eth-sepolia",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "transfer-base-to-eth.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node transfer-base-to-starknet.js",
+    "base-to-eth": "node transfer-base-to-eth.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "starknet": "^9.2.1",
+    "viem": "^2.23.4"
+  }
+}
