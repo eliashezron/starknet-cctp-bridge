@@ -15,8 +15,7 @@ const account = privateKeyToAccount(
 );
 
 const STARKNET_RPC =
-  process.env.STARKNET_RPC ||
-  "https://starknet-sepolia.g.alchemy.com/starknet/version/rpc/v0_8/EPipXybe2a8n7lGnabv01Wia92Sz5J2Y";
+  process.env.STARKNET_RPC || undefined;
 const STARKNET_ACCOUNT_ADDRESS = process.env.STARKNET_ACCOUNT_ADDRESS;
 const STARKNET_PRIVATE_KEY = process.env.STARKNET_PRIVATE_KEY;
 if (!STARKNET_ACCOUNT_ADDRESS || !STARKNET_PRIVATE_KEY) {
