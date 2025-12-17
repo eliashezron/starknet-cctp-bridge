@@ -6,10 +6,16 @@
   "license": "MIT",
   "scripts": {
     "start": "node transfer-base-to-starknet.js",
-    "base-to-eth": "node transfer-base-to-eth.js"
+    "base-to-eth": "node transfer-base-to-eth.js",
+    "solana-to-starknet": "node transfer-solana-to-starknet.js"
   },
   "dependencies": {
+    "@coral-xyz/anchor": "^0.30.1",
+    "@solana/spl-token": "0.4.14",
+    "@solana/web3.js": "^1.98.4",
     "axios": "^1.7.9",
+    "bn.js": "^5.2.2",
+    "bs58": "^6.0.0",
     "dotenv": "^16.4.7",
     "starknet": "^9.2.1",
     "viem": "^2.23.4"

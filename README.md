@@ -17,6 +17,10 @@ STARKNET_RPC=            # Starknet Sepolia RPC
 STARKNET_ACCOUNT_ADDRESS=
 STARKNET_PRIVATE_KEY=
 DESTINATION_STARKNET_ADDRESS= # optional; defaults to account
+SOLANA_RPC=                     # optional; defaults to devnet
+SOLANA_PRIVATE_KEY_B58=         # base58-encoded Solana keypair
+SOLANA_USDC_ACCOUNT=            # your USDC ATA on Solana devnet
+SOLANA_USDC_MINT=               # optional; defaults to 4zMMC... devnet USDC
 ```
 
 ## How CCTP works (brief)
@@ -31,6 +35,14 @@ npm install
 npm start
 ```
 The script `transfer-base-to-starknet` logs approve, burn, attestation polling, and the Starknet mint tx hash.
+
+### Solana → Starknet (devnet → Sepolia)
+```bash
+npm run solana-to-starknet
+```
+- Burns USDC on Solana via `depositForBurn` (TokenMessengerMinterV2)
+- Polls Circle Iris (domain 5) for attestation
+- Calls Starknet `receive_message` to mint on Sepolia
 
 ## Key contracts (testnet)
 - USDC Base Sepolia: `0x036CbD53842c5426634e7929541eC2318f3dCF7e`
