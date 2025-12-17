@@ -1,4 +1,6 @@
-# CCTP Base → Starknet (Sepolia) Quickstart
+# CCTP Base/Solana → Starknet (Testnet) Quickstart
+
+### base → Starknet (Sepolia)
 
 Bridge 0.01 USDC from Base Sepolia to Starknet Sepolia using Circle CCTP. The scripts handle approval, burn, attestation retrieval, and mint on the destination chain.
 
